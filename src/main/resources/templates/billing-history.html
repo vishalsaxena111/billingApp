@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Billing History</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+<div th:replace="~{fragments/sidebar :: sidebar}"></div>
+
+<div class="content">
+    <h3>Billing History</h3>
+
+    <table>
+        <tr>
+            <th>Bill No</th>
+            <th>Customer</th>
+            <th>Driver</th>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+        <tr th:each="bill : ${billingList}">
+            <td th:text="${bill.serialNumber}"></td>
+            <td th:text="${bill.customerName}"></td>
+            <td th:text="${bill.driverName}"></td>
+            <td th:text="${bill.totalAmount}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

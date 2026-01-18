@@ -1,0 +1,25 @@
+package com.example.BillingApp.DTO;
+
+import java.time.LocalDateTime;
+
+public class BillingRequestDTO {
+
+    private String customerName;
+    private String driverName;
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
+}
